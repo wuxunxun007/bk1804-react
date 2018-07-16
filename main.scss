@@ -1,0 +1,188 @@
+@import '@/lib/reset.scss';
+
+html, body, #root, .container {
+  @include rect(100%, 100%);
+}
+#backTop {
+  position: absolute;
+  bottom: 0.55rem;
+  right: 0.05rem;
+  display: none;
+}
+ @-webkit-keyframes load{
+            0%,100%{
+                height: 40px;
+                background: lightgreen;
+            }
+            50%{
+                height: 70px;
+                margin: -15px 0;
+                background: lightblue;
+            }
+        }
+.loadingbox{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin: auto;
+  z-index: 9999;
+  @include background-color(rgba(0,0,0,0.6));
+  @include text-color(#fff);
+  @include square(1rem);
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content();
+  @include align-items();
+  
+    span{
+            display: inline-block;
+            width: 8px;
+            height: 100%;
+            border-radius: 4px;
+            background: lightgreen;
+            -webkit-animation: load 1s ease infinite;
+            
+            &:nth-child(2){
+              -webkit-animation-delay:0.2s;
+            }
+            &:nth-child(3){
+            	-webkit-animation-delay:0.4s;
+            }
+            &:nth-child(4){
+            	-webkit-animation-delay:0.6s;
+            }
+            &:nth-child(5){
+            	-webkit-animation-delay:0.8s;
+            }
+        }
+}
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  
+  .main {
+      @include flex();
+      @include rect(100%, auto);
+      @include flexbox();
+      @include flex-direction(column);
+      header {
+        @include rect(100%, 0.45rem);
+        @include background-color(#f66);
+        @include flexbox();
+        
+        .left, .center, .right{
+          @include flexbox();
+          @include flex-direction(column);
+          @include justify-content();
+          @include align-items();
+        }
+
+        .left{
+          @include rect(0.3rem, 100%);
+
+        }
+        .center{
+          @include flex();
+          @include rect(auto, 100%);
+        }
+        .right{
+          @include rect(0.3rem, 100%);
+        }
+      }
+      .content{
+        @include flex();
+        @include rect(100%, auto);
+        @include overflow();
+        
+        .prolist {
+          
+          li{
+            @include rect(100%, 1rem);
+            @include border(0 0 1px 0, #ccc);
+            @include flexbox();
+            img{
+              @include rect(0.9rem, 0.9rem);
+              @include margin(0.05rem);
+            }
+            
+            .proinfo{
+              @include flex();
+
+            }
+          }
+        }
+        &.kindContent{
+          @include flexbox();
+            .kindMenu {
+            	@include rect(1rem, 100%);
+              @include overflow();
+              @include border(0 1px 0 0, #ccc);
+              
+              li{
+                @include rect(100%, 0.6rem);
+                @include border(0 0 1px 0, #ccc);
+                @include flexbox();
+                @include flex-direction(column);
+                @include justify-content();
+                @include align-items();
+                
+                a {
+                  @include text-color(#555)
+                  &.active{
+                  	@include text-color(#f66)
+                  }
+                }
+                
+              }
+            }
+            
+            .kindList{
+              @include flex();
+              @include rect(auto, 100%);
+              @include overflow();
+            }
+        }
+        
+      }
+  }
+  footer{
+    @include rect(100%, 0.5rem);
+    @include background-color(#ccc);
+    
+      ul{
+        @include rect(100%, 100%);
+        @include flexbox();
+          li{
+            @include flex();
+            @include rect(auto, 100%);
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content();
+            @include align-items();
+            
+            a {
+              @include text-color(#333);
+              &.active{
+                @include text-color(#f66);
+              }
+            }
+          }
+      }
+  }
+}
+.space-carousel {
+  padding: 16px;
+  background: #DEF1E5;
+  overflow: hidden;
+}
+.am-search {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+.sub-title {
+  color: #888;
+  font-size: 14px;
+  padding: 30px 0 18px 0;
+}
