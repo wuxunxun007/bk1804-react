@@ -23,7 +23,7 @@ class App extends Component {
   render () {
     return (
       <div className = 'container'>
-      臭豆腐来了
+      臭豆腐来了,闻着臭,吃着也臭,女朋友吃没了
         <Switch>
           {
             this.state.routes.map((item,index) => (
