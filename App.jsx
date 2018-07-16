@@ -23,6 +23,7 @@ class App extends Component {
   render () {
     return (
       <div className = 'container'>
+        高星来了
         <Switch>
           {
             this.state.routes.map((item,index) => (
