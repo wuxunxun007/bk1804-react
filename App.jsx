@@ -23,7 +23,7 @@ class App extends Component {
   render () {
     return (
       <div className = 'container'>
-      是大多数
+      高星
         <Switch>
           {
             this.state.routes.map((item,index) => (
