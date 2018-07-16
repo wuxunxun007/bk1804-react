@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <div className = 'container'>
 			
-			哈哈哈哈
+			哈哈哈哈,我是jbone
         <Switch>
           {
             this.state.routes.map((item,index) => (
