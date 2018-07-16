@@ -23,6 +23,8 @@ class App extends Component {
   render () {
     return (
       <div className = 'container'>
+			
+			哈哈哈哈
         <Switch>
           {
             this.state.routes.map((item,index) => (
